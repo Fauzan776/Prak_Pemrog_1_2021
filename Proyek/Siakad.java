@@ -23,7 +23,7 @@ public class Siakad {
 
     private static int tampilanMenu() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("..Menu..");
+        System.out.println("...Menu Siakad...");
         System.out.println("1. Lihat Data");
         System.out.println("2. Tambah Data");
         System.out.println("3. Cari Data");
@@ -40,7 +40,7 @@ public class Siakad {
         if (jumlahData==0) {
             System.out.println("Belum ada data");
         } else {
-            System.out.println("Berikut data mahasiswa");
+            System.out.println("Berikut data mahasiswa:");
             for (int i=0; i<jumlahData;i++) {
                 mahasiswa[i].getDetail();
             }
@@ -62,7 +62,6 @@ public class Siakad {
         inputMahasiswa.setTinggiBadang(tinggi);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
-        lihatData();
     }
 
     public void cariData() {
@@ -70,6 +69,7 @@ public class Siakad {
         System.out.print("Masukan NIM mahasiswa yang akan dicari = ");
         String nim = scan.nextLine();
 
+        System.out.println("Berikut Data Mahasiswa Yang Dicari:");
         for (int i = 0; i < jumlahData; i++) {
             if (nim.equals(mahasiswa[i].getNIM())) {
                 mahasiswa[i].getDetail();
