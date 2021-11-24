@@ -2,11 +2,13 @@ public class Mahasiswa extends Manusia {
     private String nim;
     private String nama;
     private double ipk;
+    private int semester;
 
-    public Mahasiswa(String nim, String nama, double ipk) {
+    public Mahasiswa(String nim, String nama, double ipk, int semester) {
         this.nim = nim;
         this.nama = nama;
         this.ipk = ipk;
+        this.semester = semester;
     }
 
     public void setNIM(String nim) {
@@ -34,7 +36,7 @@ public class Mahasiswa extends Manusia {
     }
 
     public void getDetail() {
-        System.out.println(this.nim+"\t "+this.nama+"\t "+this.ipk+"\t "+this.tinggiBadan);
+        System.out.println(this.nim+"\t "+this.nama+"\t "+this.ipk+"\t "+this.tinggiBadan+"\t "+this.beratBadan+"\t Semester "+this.semester);
     }
 
 }

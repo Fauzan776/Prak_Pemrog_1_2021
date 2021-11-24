@@ -56,10 +56,15 @@ public class Siakad {
         String nama = scan.nextLine();
         System.out.print("Masukan IPK mahasiswa = ");
         double ipk = scan.nextDouble();
+        System.out.print("Masukan Semester mahasiswa = ");
+        int semester = scan.nextInt();
         System.out.print("Masukan Tinggi Badan mahasiswa = ");
         double tinggi = scan.nextDouble();
-        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
-        inputMahasiswa.setTinggiBadang(tinggi);
+        System.out.print("Masukan Berat Badan mahasiswa = ");
+        double berat = scan.nextDouble();
+        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk, semester);
+        inputMahasiswa.setTinggiBadan(tinggi);
+        inputMahasiswa.setBeratBadan(berat);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
     }
